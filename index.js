@@ -22,7 +22,8 @@ app.post("/dec", (req, res) => {
 })
 
 app.post("/die", (req, res) => {
-    process.kill(process.pid, 'SIGTERM')
+    res.send("Server shutting down Now")
+    process.exit()
 })
 
 const port = 3031
